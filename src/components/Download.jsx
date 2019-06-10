@@ -24,7 +24,15 @@ class DownloadConnected extends React.Component {
 			converter.json2csv(this.props.stores, function(err, csv) {
 				if(err) console.log(err)
 
-				console.log(csv)
+				const uri = "data:text/plain;charset=utf-8," + encodeURIComponent(csv);
+
+				// there should be a batter way to do this, inspired by http://cwestblog.com/2014/10/21/javascript-creating-a-downloadable-file-in-the-browser/
+				var download = document.createElement('donwload');
+			    document.body.appendChild(download);
+			    download.href = uri;
+			    download.download = 'micromania.csv';
+			    download.click();
+			    document.body.removeChild(download);
 			})
 		}
 
@@ -37,7 +45,7 @@ class DownloadConnected extends React.Component {
 				variant="contained" 
 				colory="primary" 
 				disabled={ (stores.length > 0) > 0 ? false : true }
-				action={this.handleClick}>Download history
+				onClick={this.handleClick}>Download history
 			</Button>
 		)
 	}
