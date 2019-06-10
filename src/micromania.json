@@ -1,0 +1,46 @@
+[{
+	"name": "Paris Général Leclerc",
+	"address": "24 Avenue du Gnral Leclerc",
+	"zipcode": 75014,
+	"city": "Paris",
+	"lat": 48.8320406,
+	"lng": 2.3280052
+
+},
+{
+	"name": "Paris St Antoine",
+	"address": "3 bis rue du Faubourg St Antoine",
+	"zipcode": 75011,
+	"city": "Paris",
+	"lat": 48.8532477,
+	"lng": 2.3684457
+
+},
+{
+	"name": "Paris Vaugirard",
+	"address": "365, Rue de Vaugirard",
+	"zipcode": 75015,
+	"city": "Paris",
+	"lat": 48.8363345,
+	"lng": 2.2931311
+
+},
+{
+	"name": "Paris Victor Hugo",
+	"address": "137 Avenue Victor Hugo",
+	"zipcode": 75116,
+	"city": "Paris",
+	"lat": 48.8674125,
+	"lng": 2.2781153
+
+},
+{
+	"name": "Parly 2",
+	"address": "Centre commercial PARLY 2",
+	"zipcode": 78150,
+	"city": "Le Chesnay",
+	"lat": 48.8280448,
+	"lng": 2.1139868
+
+}
+]
