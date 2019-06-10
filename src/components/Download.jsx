@@ -36,7 +36,6 @@ class DownloadConnected extends React.Component {
 			<Button 
 				variant="contained" 
 				colory="primary" 
-				className="download"
 				disabled={ (stores.length > 0) > 0 ? false : true }
 				action={this.handleClick}>Download history
 			</Button>

@@ -40,3 +40,7 @@
   z-index: 99;
   max-height: 500px;
 }
+
+#history .card {
+  margin-bottom: 10px;
+}
