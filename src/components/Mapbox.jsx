@@ -1,11 +1,19 @@
 import React from "react";
 import ReactMapboxGl, { Layer, Feature, Popup } from "react-mapbox-gl";
+import { selectStore } from '../actions/index';
+import { connect } from 'react-redux';
 
 const Map = ReactMapboxGl({
 	accessToken: "pk.eyJ1IjoiZWRvdWFyZGptbiIsImEiOiJjandxaWtianYwNDJ6NDRwNWpwZWVzd3BiIn0.eYMQVdo8RE8D_LvVu8rwOg"
 })
 
-class Mapbox extends React.Component {
+function mapDispatchToProps(dispatch) {
+	return {
+		selectStore: (store) => dispatch(selectStore(store))
+	}
+}
+
+class MapboxConnect extends React.Component {
 
 	constructor() {
 		super();
@@ -16,9 +24,10 @@ class Mapbox extends React.Component {
 	}
 
 	handleClick(store) {
+		this.props.selectStore(store);
 		this.setState({
 			store: store
-		})
+		});
 	}
 
 	render() {
@@ -58,5 +67,7 @@ class Mapbox extends React.Component {
 		)
 	}
 }
+
+const Mapbox = connect(null, mapDispatchToProps)(MapboxConnect)
 
 export default Mapbox
