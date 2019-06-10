@@ -10,6 +10,8 @@ function rootReducers(state = initialState, action) {
 			return Object.assign({}, state, {
 				stores: state.stores.concat(action.payload)
 			})
+		default:
+			return state;
 	}
 }
 
