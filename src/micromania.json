@@ -1,4 +1,5 @@
 [{
+	"id": 420,
 	"name": "Paris Général Leclerc",
 	"address": "24 Avenue du Gnral Leclerc",
 	"zipcode": 75014,
@@ -8,6 +9,7 @@
 
 },
 {
+	"id": 411,
 	"name": "Paris St Antoine",
 	"address": "3 bis rue du Faubourg St Antoine",
 	"zipcode": 75011,
@@ -17,6 +19,7 @@
 
 },
 {
+	"id": 418,
 	"name": "Paris Vaugirard",
 	"address": "365, Rue de Vaugirard",
 	"zipcode": 75015,
@@ -26,6 +29,7 @@
 
 },
 {
+	"id": 419,
 	"name": "Paris Victor Hugo",
 	"address": "137 Avenue Victor Hugo",
 	"zipcode": 75116,
@@ -35,6 +39,7 @@
 
 },
 {
+	"id": 83,
 	"name": "Parly 2",
 	"address": "Centre commercial PARLY 2",
 	"zipcode": 78150,
