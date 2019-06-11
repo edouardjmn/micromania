@@ -16,12 +16,14 @@ class HistoryConnected extends React.Component {
 			<div>
 			{ this.props.stores.map(
 				(store, index) => {
-					return(	<Card key={index} className='card'>
+					return	(	
+						<Card key={index} className='card'>
 								<CardContent>
 									<b>{store.name}</b><br />
 									<span>{store.address}, {store.zipcode} {store.city}</span>
 								</CardContent>
-							</Card>)
+							</Card>
+							)
 				}
 			)}
 			</div>

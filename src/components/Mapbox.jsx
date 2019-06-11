@@ -54,7 +54,7 @@ class MapboxConnect extends React.Component {
 					))}
 				</Layer>
 
-				{Object.keys(this.state.store).length > 0 && (
+				{Object.keys(currentStore).length > 0 && (
 					<Popup coordinates={[currentStore.lng, currentStore.lat]}>
 						<div><b>{currentStore.name}</b></div>
 						<div>

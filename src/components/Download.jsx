@@ -27,7 +27,7 @@ class DownloadConnected extends React.Component {
 				const uri = "data:text/plain;charset=utf-8," + encodeURIComponent(csv);
 
 				// there should be a batter way to do this, inspired by http://cwestblog.com/2014/10/21/javascript-creating-a-downloadable-file-in-the-browser/
-				var downloadBtn = document.createElement('a');
+				const downloadBtn = document.createElement('a');
 				document.body.appendChild(downloadBtn);
 				downloadBtn.href = uri;
 				downloadBtn.download = 'micromania.csv';
