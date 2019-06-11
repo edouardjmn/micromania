@@ -8,7 +8,7 @@ export function singleSelectionMiddleware({ dispatch }) {
 				case SELECT_STORE:
 					const foundStore = store.getState().stores.filter(
 						store => {
-								return(action.payload.id == store.id)
+								return(action.payload.id === store.id)
 							}
 
 					)
