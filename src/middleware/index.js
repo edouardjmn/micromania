@@ -12,14 +12,14 @@ export function singleSelectionMiddleware({ dispatch }) {
 							}
 
 					)
-
 					if (foundStore.length) {
 						console.log('This stores was already selected! :(')
 						return dispatch( { type: FOUND_DUPLICATE_STORE } )
 					}
+					return next(action)
+				default:
+					return next(action)
 			}
-
-			return next(action);
 		}
 	}
 }
