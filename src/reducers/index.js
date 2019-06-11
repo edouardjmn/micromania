@@ -12,7 +12,7 @@ function rootReducers(state = initialState, action) {
 			})
 		case REMOVE_STORE:
 			return Object.assign({}, state, {
-				stores: state.stores.filter((store) => store.id != action.payload.id)
+				stores: state.stores.filter((store) => store.id !== action.payload.id)
 			})
 		default:
 			return state;
