@@ -1,7 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
+import { removeStore } from "../actions/index";
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
+import CardActions from '@material-ui/core/CardActions';
+import Button from '@material-ui/core/Button';
 
 function mapStateToProps(state) {
 	return {
@@ -9,7 +12,17 @@ function mapStateToProps(state) {
 	}
 }
 
+function mapDispatchToProps(dispatch) {
+	return {
+		removeStore: (store) => dispatch(removeStore(store))
+	}
+}
+
 class HistoryConnected extends React.Component {
+
+	handleRemove(store) {
+		this.props.removeStore(store);
+	}
 
 	render() {
 		return(
@@ -22,6 +35,9 @@ class HistoryConnected extends React.Component {
 									<b>{store.name}</b><br />
 									<span>{store.address}, {store.zipcode} {store.city}</span>
 								</CardContent>
+								<CardActions>
+									<Button size="small" onClick={this.handleRemove.bind(this, store)}>Remove</Button>
+								</CardActions>
 							</Card>
 							)
 				}
@@ -32,7 +48,7 @@ class HistoryConnected extends React.Component {
 
 }
 
-const History = connect(mapStateToProps)(HistoryConnected)
+const History = connect(mapStateToProps, mapDispatchToProps)(HistoryConnected)
 
 export default History;
 
